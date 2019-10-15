@@ -1,5 +1,5 @@
 {
-  "name": "@birdiecare/rruletz",
+  "name": "@birdiecare/rrule-tz",
   "version": "0.0.1",
   "description": "An opinionated wrapper around rrule providing timezone aware scheduling",
   "main": "dist/index.js",

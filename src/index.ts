@@ -1,2 +1,2 @@
-export * from './rruletz';
-export * from './rruletzstr';
+export * from './rrule';
+export * from './rrulestr';

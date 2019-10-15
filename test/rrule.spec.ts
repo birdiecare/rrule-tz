@@ -1,5 +1,4 @@
-import { RRule } from 'rrule';
-import { rruletzstr } from '../src';
+import { RRule, rrulestr } from '../src';
 
 describe('RRuletz', () => {
   describe('between()', () => {
@@ -19,7 +18,7 @@ describe('RRuletz', () => {
          * In 2019, change occurs morning of Sunday 6th October 2019
          */
         const str = `DTSTART:${localDtstart}\nRRULE:FREQ=DAILY;BYDAY=SA,SU;BYHOUR=8;UNTIL=${localUntil};TZID=${timezone}`;
-        rrule = rruletzstr(str);
+        rrule = rrulestr(str);
       });
 
       it('returns two dates', () => {
