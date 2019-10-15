@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "TZ=Australia/Sydney jest"
+    "test": "npm run test:sydney && npm run test:utc",
+    "test:utc": "TZ=UTC jest",
+    "test:sydney": "TZ=Australia/Sydney jest"
   },
   "keywords": [
     "rrule",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",
+    "@types/luxon": "^1.15.2",
     "@types/node": "^12.7.5",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",

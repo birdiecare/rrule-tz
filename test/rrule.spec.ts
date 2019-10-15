@@ -1,3 +1,5 @@
+import { DateTime } from 'luxon';
+
 import { RRule, rrulestr } from '../src';
 
 describe('RRuletz', () => {
@@ -28,13 +30,17 @@ describe('RRuletz', () => {
 
       it('correctly returns a date before the change', () => {
         const [first] = rrule.between(new Date(dtstart), new Date(until));
-        const firstStr = first.toISOString();
+        const firstStr = DateTime.fromJSDate(first, { zone: 'utc' })
+          .setZone(timezone)
+          .toISO();
         expect(firstStr).toEqual('2019-10-05T08:00:00.000+10:00');
       });
 
       it('and after the change', () => {
         const [_, second] = rrule.between(new Date(dtstart), new Date(until));
-        const secondStr = second.toISOString();
+        const secondStr = DateTime.fromJSDate(second, { zone: 'utc' })
+          .setZone(timezone)
+          .toISO();
         expect(secondStr).toEqual('2019-10-06T08:00:00.000+11:00');
       });
     });
