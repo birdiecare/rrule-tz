@@ -1,0 +1,27 @@
+{
+  "name": "@birdiecare/rruletz",
+  "version": "0.0.1",
+  "description": "An opinionated wrapper around rrule providing timezone aware scheduling",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "keywords": [
+    "rrule",
+    "timezone"
+  ],
+  "author": "David Beaumont <david.beaumont@birdie.care>",
+  "license": "ISC",
+  "dependencies": {
+    "luxon": "^1.19.3",
+    "rrule": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.7.5",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.1.0",
+    "typescript": "^3.6.4"
+  }
+}
