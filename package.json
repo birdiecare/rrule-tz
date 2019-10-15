@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "test": "npm run test:sydney && npm run test:utc",
+    "test": "npm run test:sydney",
     "test:utc": "TZ=UTC jest",
     "test:sydney": "TZ=Australia/Sydney jest"
   },

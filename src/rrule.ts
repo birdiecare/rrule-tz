@@ -20,7 +20,8 @@ export class RRule {
     const utcDates = this._instance.between(after, before);
 
     return utcDates.map(d => {
-      return DateTime.fromJSDate(d, { zone: 'UTC' })
+      return DateTime.fromJSDate(d)
+        .toUTC()
         .setZone(tzid!, { keepLocalTime: true })
         .toJSDate();
     });
